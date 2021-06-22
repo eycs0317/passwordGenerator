@@ -26,7 +26,8 @@ git clone  https://github.com/eycs0317/passwordGenerator.git
 Eddie Yeung
 
 ## Images
-![example](https://github.com/eycs0317/EddieYeungPortfolio/blob/main/images/example1.png)
+![example1](/images/image1.png)
+![example2](/images/image2.png)
 
 
 
