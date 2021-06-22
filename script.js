@@ -27,6 +27,21 @@ function writePassword() {
     userRequirment.upperCase = confirm('Include Uppercase?')
     userRequirment.number = confirm('Include Number?')
     userRequirment.symbol = confirm('Include Symbol?')
+
+    for(let key in userRequirment) {
+      if(userRequirment[key]) {
+        if(key[0] === 'l') {
+          userRequestChar.push(lowerCaseBase)
+        } else if(key[0] === 'u') {
+          userRequestChar.push(upperCaseBase)
+        } else if(key[0] === 'n') {
+          userRequestChar.push(numbersBase)
+        } else {
+          userRequestChar.push(symbolBase)
+        }
+      }
+    }
+
   } else {
     alert('Invalid Input')
   }
