@@ -21,7 +21,7 @@ function writePassword() {
 
   var userInputLength = prompt('Please input Password length between 8-128')
   userInputLength = Number(userInputLength);
-  if(userInputLength <= 128 && userInputLength >= 8) {
+  if(userInputLength <= 128 && userInputLength >= 8 && Number.isInteger(userInputLength)) {
     userRequestLength = userInputLength;
     userRequirment.lowerCase = confirm('Include lowercase?')
     userRequirment.upperCase = confirm('Include Uppercase?')
@@ -45,8 +45,6 @@ function writePassword() {
     if(userRequestChar.length === 0) {
       alert('You need to have at least one option')
     } else {
-      // console.log('length', userRequestLength);
-      // console.log('userRequestChar', userRequestChar) // array char set
       for(var i = 0; i < userRequestLength; i++) {
         let randomChar = randomNumberFunc(userRequestChar);
         let randomIndex = randomNumberFunc(userRequestChar[randomChar]);
@@ -55,14 +53,9 @@ function writePassword() {
       var passwordText = document.querySelector("#password");
       passwordText.innerText = password;
     }
-
   } else {
     alert('Invalid Input')
   }
-  // var password = generatePassword();
-  // var passwordText = document.querySelector("#password");
-
-  // passwordText.value = password;
 
 }
 
