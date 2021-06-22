@@ -42,6 +42,20 @@ function writePassword() {
       }
     }
 
+    if(userRequestChar.length === 0) {
+      alert('You need to have at least one option')
+    } else {
+      // console.log('length', userRequestLength);
+      // console.log('userRequestChar', userRequestChar) // array char set
+      for(var i = 0; i < userRequestLength; i++) {
+        let randomChar = randomNumberFunc(userRequestChar);
+        let randomIndex = randomNumberFunc(userRequestChar[randomChar]);
+        password += userRequestChar[randomChar][randomIndex]
+      }
+      var passwordText = document.querySelector("#password");
+      passwordText.innerText = password;
+    }
+
   } else {
     alert('Invalid Input')
   }
@@ -50,6 +64,11 @@ function writePassword() {
 
   // passwordText.value = password;
 
+}
+
+const randomNumberFunc = (input) => {
+  let randomNumber = Math.floor(Math.random() * input.length);
+  return randomNumber;
 }
 
 // Add event listener to generate button
