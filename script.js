@@ -18,6 +18,18 @@ function writePassword() {
     number: null,
     symbol: null
   }
+
+  var userInputLength = prompt('Please input Password length between 8-128')
+  userInputLength = Number(userInputLength);
+  if(userInputLength <= 128 && userInputLength >= 8) {
+    userRequestLength = userInputLength;
+    userRequirment.lowerCase = confirm('Include lowercase?')
+    userRequirment.upperCase = confirm('Include Uppercase?')
+    userRequirment.number = confirm('Include Number?')
+    userRequirment.symbol = confirm('Include Symbol?')
+  } else {
+    alert('Invalid Input')
+  }
   // var password = generatePassword();
   // var passwordText = document.querySelector("#password");
 
