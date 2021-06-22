@@ -9,10 +9,19 @@ let symbolBase = '!"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~';
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  let password ='';
+  let userRequestLength = null;
+  let userRequestChar = [];
+  let userRequirment = {
+    lowerCase: null,
+    upperCase: null,
+    number: null,
+    symbol: null
+  }
+  // var password = generatePassword();
+  // var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  // passwordText.value = password;
 
 }
 
