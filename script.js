@@ -19,6 +19,7 @@ function writePassword() {
     symbol: null
   }
 
+  //prompt user
   var userInputLength = prompt('Please input Password length between 8-128')
   userInputLength = Number(userInputLength);
   if(userInputLength <= 128 && userInputLength >= 8 && Number.isInteger(userInputLength)) {
@@ -28,6 +29,7 @@ function writePassword() {
     userRequirment.number = confirm('Include Number?')
     userRequirment.symbol = confirm('Include Symbol?')
 
+    //Create a array with all characters that user required
     for(let key in userRequirment) {
       if(userRequirment[key]) {
         if(key[0] === 'l') {
@@ -42,6 +44,7 @@ function writePassword() {
       }
     }
 
+    //Make sure user pick at least one type of characters
     if(userRequestChar.length === 0) {
       alert('You need to have at least one option')
     } else {
@@ -56,7 +59,6 @@ function writePassword() {
   } else {
     alert('Invalid Input')
   }
-
 }
 
 const randomNumberFunc = (input) => {
