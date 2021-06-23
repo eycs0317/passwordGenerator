@@ -4,11 +4,10 @@
 
 PasswordGenerator is a Web App that help you to generate random password. You have option to choose length of the password between 8 - 128. Also can choose the option with uppercase, lowercase, numbers and symbols.
 
+
 ## Getting Started
 
 git clone  https://github.com/eycs0317/passwordGenerator.git
-
-##  Usage
 
 
 ## Build With
@@ -20,7 +19,7 @@ git clone  https://github.com/eycs0317/passwordGenerator.git
 
 [Github](https://github.com/eycs0317/passwordGenerator)
 
-[Live URL]()
+[Live URL](https://eycs0317.github.io/passwordGenerator/)
 
 ## Authors
 Eddie Yeung
