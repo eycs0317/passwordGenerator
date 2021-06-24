@@ -1,10 +1,12 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var passwordText = document.querySelector("#password");
 
 let lowerCaseBase = 'abcdefghijklmnopqrstuvwxyz';
 let upperCaseBase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 let numbersBase = '0123456789';
 let symbolBase = ' !"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~';
+
 
 // Write password to the #password input
 function writePassword() {
@@ -47,12 +49,13 @@ function writePassword() {
     if(userRequestChar.length === 0) {
       alert('You need to have at least one option')
     } else {
+      // Generate random password
       for(var i = 0; i < userRequestLength; i++) {
         let randomChar = randomNumberFunc(userRequestChar);
         let randomIndex = randomNumberFunc(userRequestChar[randomChar]);
         password += userRequestChar[randomChar][randomIndex]
       }
-      var passwordText = document.querySelector("#password");
+      // Display the password
       passwordText.innerText = password;
     }
   } else {
@@ -60,6 +63,7 @@ function writePassword() {
   }
 }
 
+//function to create random number base on the length of the array/string
 const randomNumberFunc = (input) => {
   let randomNumber = Math.floor(Math.random() * input.length);
   return randomNumber;

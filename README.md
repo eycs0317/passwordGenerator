@@ -9,6 +9,11 @@ PasswordGenerator is a Web App that help you to generate random password. You ha
 
 git clone  https://github.com/eycs0317/passwordGenerator.git
 
+## How to use
+
+1. Click the 'Generate Password' button.
+2. Type in the length that you want. (length have to be between 8 - 128)
+3. Pick the option lowercase, uppercase, number and special character.(at least one option).
 
 ## Build With
   * HTML
